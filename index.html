@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Starter Drawing App</title>
+<!-- JavaScript libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5.5.1/dist/iro.min.js"></script>
+<!-- CSS styles -->
+<style>
+.banner {
+text-align: center;
+font-weight: bold;
+font-size: 24px;
+color: white;
+background-color: #8EB89A; /* Set background color to friends red */
+height: 50px; /* Set height to 50 pixels */
+line-height: 50px; /* Align text vertically center */
+width: 450px;
+}
+
+.footer {
+background-color: #F1F9F3;
+width: 450px;
+}
+</style>
+<!-- Additional CSS styles -->
+<style>
+
+#settingsContainer * {
+border: 2px solid black;
+padding: 2px;
+width: 120px; 
+}
+
+#controlsContainer *{
+border: 2px solid black;
+gap: 10px;
+padding: 5px;
+width: 100px; 
+}
+
+
+#controlsContainer {
+background-color: #FBFDFC;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between; /* Add this line */
+padding: 5px; /* Adjust padding as needed */
+gap: 35px;
+width: 140px; /* Adjust width as needed */
+height: 790px; /* Adjust height as needed */
+}
+
+#settingsContainer {
+background-color: #8EB89A;
+display: flex;
+align-items: center;
+justify-content: center; /* Center horizontally */
+padding: 5px; /* Adjust padding as needed */
+gap: 15px;
+width: 440px; /* Change width to 450px */
+
+}
+
+.colorButton {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+#colorbuttonsContainer {
+    background-color: #8EB89A;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    padding: 5px; /* Adjust padding as needed */
+    gap: 15px;
+    width: 440px; /* Change width to 450px */
+}
+  
+</style>
+</head>
+<body>
+<div class="banner" id="app-header">
+This title will be replaced by p5 code!
+</div>
+<div id="canvasContainer"></div>
+<div class="footer">
+<div id="controlsContainer">
+<!-- Move your existing buttons here -->
+</div>
+<div id="settingsContainer">
+</div>
+<div id="colorbuttonsContainer">
+<!-- New colorbuttons container -->
+</div>
+</div>
+<script src="24dasroy_SE01.05.js"></script>
+</body>
+</html>
