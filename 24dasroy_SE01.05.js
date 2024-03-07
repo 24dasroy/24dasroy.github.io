@@ -236,14 +236,19 @@ function onImageSelect() {
   // Calculate the aspect ratio of the selected image
   let aspectRatio = selectedImage.width / selectedImage.height;
 
-  // Calculate the width and height for displaying the image within the canvas
+  // Calculate the dimensions to fit the image inside the canvas while maintaining aspect ratio
   let displayWidth = windowWidth;
-  let displayHeight = windowWidth / aspectRatio;
+  let displayHeight = windowHeight;
 
-  // If the calculated height exceeds the canvas height, adjust the dimensions accordingly
-  if (displayHeight > windowHeight) {
-    displayHeight = windowHeight;
-    displayWidth = windowHeight * aspectRatio;
+  // Check if the width needs to be adjusted based on aspect ratio
+  if (aspectRatio > 1) {
+    displayWidth = min(windowWidth, windowHeight * aspectRatio);
+    displayHeight = displayWidth / aspectRatio;
+  }
+  // Check if the height needs to be adjusted based on aspect ratio
+  else {
+    displayHeight = min(windowHeight, windowWidth / aspectRatio);
+    displayWidth = displayHeight * aspectRatio;
   }
 
   // Calculate the position to draw the image in the middle of the canvas
