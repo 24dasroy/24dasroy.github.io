@@ -57,7 +57,7 @@ function preload() {
 
 //initialize variables and setup program
 function setup() {
-  let canvas = createCanvas(windowWidth-16, windowHeight - 200);
+  let canvas = createCanvas(windowWidth, windowHeight);
   let canvasContainer = select("#canvasContainer");
   canvas.parent("canvasContainer");
   controlsContainer = select("#controlsContainer");
